@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fruit : MonoBehaviour
 {
     public float ShootPower = 10f;
+    public GameObject particalse;
     GameObject DestroyGround;
     Rigidbody rb;
 
@@ -31,6 +32,7 @@ public class Fruit : MonoBehaviour
     }
     public void DestroyFtuit()
     {
+        Instantiate(particalse, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }
